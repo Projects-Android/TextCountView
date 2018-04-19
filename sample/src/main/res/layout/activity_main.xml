@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tcv="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="50dp"
+    tools:context="com.ev.travelcard.counttextview.MainActivity">
+
+    <EditText
+        android:id="@+id/et_main_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="44px"/>
+
+    <com.ev.travelcard.library.TextCountView
+        android:id="@+id/tcv_main_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="right"
+        android:textSize="30px"
+        android:textColor="#333333"
+        tcv:maxCount="20"
+        tcv:highlightColor="#e33124"
+        tcv:oor_tip_style="highlight|animate"/>
+
+</LinearLayout>

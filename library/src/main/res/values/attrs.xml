@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TextCountView" >
+        <!-- max size of text -->
+        <attr name="maxCount" format="integer" />
+        <!-- seperator of current count and max count -->
+        <attr name="numSeperator" format="string" />
+        <!-- tip style when current count is out of range -->
+        <attr name="oor_tip_style" >
+            <flag name="stock" value="0x01"/>
+            <flag name="highlight" value="0x02"/>
+            <flag name="animate" value="0x04"/>
+        </attr>
+        <!-- color of high light -->
+        <attr name="highlightColor" format="color|reference" />
+    </declare-styleable>
+</resources>
