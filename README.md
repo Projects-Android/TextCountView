@@ -6,7 +6,7 @@ TextCountView is a view to show text size limit with high light and animation wh
 # How to use++
 **1. Define in xml**
 
-```
+```xml
 <com.ev.travelcard.library.TextCountView
         android:id="@+id/tcv_main_count"
         android:layout_width="wrap_content"
@@ -22,7 +22,7 @@ TextCountView is a view to show text size limit with high light and animation wh
 
 **2. Or in code**
 
-```
+```java
 TextCountView countTextView = new TextCountView(this);
         countTextView.setMaxCount(50);
         countTextView.setHighlightColor(Color.RED);
