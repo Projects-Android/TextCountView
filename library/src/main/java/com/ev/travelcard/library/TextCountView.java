@@ -66,7 +66,7 @@ public class TextCountView extends AppCompatTextView {
         setCount(0);
     }
 
-    public void initAnimator(int minSize) {
+    private void initAnimator(int minSize) {
         ObjectAnimator sizeAnimator = ObjectAnimator.ofInt(this, "AnimatorScale", minSize, minSize * 2, minSize);
         sizeAnimator.setRepeatMode(ValueAnimator.RESTART);
         sizeAnimator.setRepeatCount(0);
@@ -76,6 +76,11 @@ public class TextCountView extends AppCompatTextView {
         mAnimator.setInterpolator(new AccelerateInterpolator());
     }
 
+    /**
+     * method for object animation
+     * @param size
+     * @hide
+     */
     public void setAnimatorScale(int size) {
         SpannableString spannableString = new SpannableString(getText());
         int end = String.valueOf(mCurCount).length();
@@ -133,7 +138,7 @@ public class TextCountView extends AppCompatTextView {
             int iCount = Integer.parseInt(count);
             setCount(iCount);
         } catch (NumberFormatException e) {
-            Log.i(TAG, "Function setCount() only supports numbers!", e);
+            Log.i(TAG, "Method setCount() only supports numbers!", e);
         }
     }
 
